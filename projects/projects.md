@@ -4,6 +4,11 @@ title: Projects
 permalink: /projects/
 ---
 
+<!-- Dark/Light Mode Toggle Button -->
+<div style="text-align:right; margin-bottom:1rem;">
+  <button id="dark-toggle" class="btn-dark">🌙 Dark Mode</button>
+</div>
+
 # ⚡ Projects
 
 <div class="skills-container">
@@ -59,4 +64,45 @@ permalink: /projects/
   <!-- Project 8 -->
   <div class="skill-card">
     <h4>KPI Dashboards for Pipeline Integrity – Atmos Energy</h4>
-    <
+    <p>Led definition and monitoring of six core KPIs. Built executive Tableau dashboards with automated refreshes for proactive risk management.</p>
+  </div>
+
+</div>
+
+---
+
+# 🎓 Education
+
+**Illinois Institute of Technology**  
+Master’s in Data Science | Jan 2021 – Dec 2022 | Chicago, IL
+
+<!-- Include JS for Dark/Light Mode -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.getElementById("dark-toggle");
+  const body = document.body;
+
+  if (!toggleButton) return;
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    body.classList.add("dark-mode");
+    toggleButton.textContent = "🌞 Light Mode";
+  } else {
+    toggleButton.textContent = "🌙 Dark Mode";
+  }
+
+  // Toggle theme on click
+  toggleButton.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+      toggleButton.textContent = "🌞 Light Mode";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggleButton.textContent = "🌙 Dark Mode";
+    }
+  });
+});
+</script>
