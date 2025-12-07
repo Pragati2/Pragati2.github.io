@@ -4,13 +4,13 @@ title: Home
 permalink: /
 ---
 
-<!-- Dark/Light Mode Toggle Slider -->
-<div style="text-align:left; margin-bottom:1rem;">
-  <label class="switch">
+<!-- Simple ON/OFF Dark Mode Toggle -->
+<div style="text-align:right; margin-bottom:1rem;">
+  <label class="toggle">
     <input type="checkbox" id="dark-toggle">
-    <span class="slider round">
-      <span class="icon sun">🌞</span>
-      <span class="icon moon">🌙</span>
+    <span class="toggle-slider">
+      <span class="toggle-label off">Light</span>
+      <span class="toggle-label on">Dark</span>
     </span>
   </label>
 </div>
