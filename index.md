@@ -15,6 +15,8 @@ permalink: /
   </label>
 </div>
 
+
+
 <!-- Hero Section -->
 <section class="hero">
   <img src="/images/pragati.jpg" alt="Pragati" class="circular">
