@@ -4,12 +4,15 @@ title: Projects
 permalink: /projects/
 ---
 
-<!-- Dark/Light Mode Toggle Button -->
+<!-- Dark/Light Mode Toggle Slider -->
 <div style="text-align:right; margin-bottom:1rem;">
-  <button id="dark-toggle" class="btn-dark">🌙 Dark Mode</button>
+  <label class="switch">
+    <input type="checkbox" id="dark-toggle">
+    <span class="slider round"></span>
+  </label>
 </div>
 
-# ⚡ Projects
+# Projects
 
 <div class="skills-container">
 
