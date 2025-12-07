@@ -58,15 +58,26 @@ body.dark-mode .hero h1 {
 
 /* Circular Hero Image */
 .circular {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 20px auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    /* Makes the image a perfect circle */
+    border-radius: 50%;
+    
+    /* Sets the size (must be equal width/height for a perfect circle) */
+    width: 150px; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+    
+    /* Ensures the image crops nicely to fill the circle */
+    object-fit: cover;
+    
+    /* Guarantees horizontal centering */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Optional: Ensure the entire hero section content is centered */
+.hero {
+    text-align: center;
+}
 /* Cards */
 .skills-container {
   display: flex;
