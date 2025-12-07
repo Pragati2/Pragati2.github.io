@@ -3,70 +3,65 @@ layout: default
 title: Home
 ---
 
-<!-- Banner Section -->
-<img src="/images/banner.png" alt="banner" class="circular">
+<!-- Hero Section -->
+<section class="hero">
+  <img src="/images/Pragati-ProfilePic.jpeg" alt="Pragati" class="circular">
+  <h1>Hi, I’m Pragati</h1>
+  <p>Data Scientist | Machine Learning | Analytics</p>
+  <p>Transforming complex data into actionable insights and predictive models.</p>
 
-# Hi, I’m Pragati   
-**Data Scientist & Machine Learning Professional**  
-Based in Dallas, TX
+  <!-- Call-to-Action Buttons -->
+  <div class="cta-buttons">
+    <a href="/projects" class="nav-button btn-info">View Projects</a>
+    <a href="/resume/resume.pdf" class="nav-button btn-outline-info">Download Resume</a>
+  </div>
+</section>
 
----
-
-<!-- About / Summary -->
-I am a data professional with 3+ years of experience across Energy, Automotive, and Insurance domains.  
-Skilled in Python, SQL, R, Tableau, ArcGIS Pro, and Machine Learning frameworks such as TensorFlow, Keras, and PyTorch.  
-
----
-
-<!-- Industrial Experience -->
-## 🏭 Industrial Experience
-- **Atmos Energy (Dallas, TX)** – Data Analyst / Data Scientist  
-  *Created ETL pipelines, KPIs, and predictive geospatial models.*  
-- **CCC Intelligent Solutions (Dallas, TX)** – Data Analyst  
-  *Developed dashboards and automated reports for insurance analytics.*  
-- **Visteon Corporation (Dallas, TX)** – Data Analyst  
-  *Built data pipelines and visualizations for automotive operations.*
-
----
+<hr>
 
 <!-- Skills Section -->
-## 🛠 Skills
-<div class="skills-container">
-  <div class="skill-card">
-    <img src="/images/python.png" alt="Python">
-    <h4>Python</h4>
-    <p>Data analysis, automation, machine learning</p>
+<section class="skills-section">
+  <h2>🛠 Core Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card">
+      <img src="/images/python.png" alt="Python">
+      <h4>Python</h4>
+      <p>Data Analysis, Automation, Machine Learning</p>
+    </div>
+    <div class="skill-card">
+      <img src="/images/sql.png" alt="SQL">
+      <h4>SQL</h4>
+      <p>Database Queries, ETL Pipelines</p>
+    </div>
+    <div class="skill-card">
+      <img src="/images/tableau.png" alt="Tableau">
+      <h4>Tableau</h4>
+      <p>Dashboards, KPI Reporting</p>
+    </div>
+    <div class="skill-card">
+      <img src="/images/arcgis.png" alt="ArcGIS Pro">
+      <h4>ArcGIS Pro</h4>
+      <p>Geospatial Data Analysis & Visualization</p>
+    </div>
+    <div class="skill-card">
+      <img src="/images/ml.png" alt="Machine Learning">
+      <h4>Machine Learning</h4>
+      <p>Prediction Models, TensorFlow, PyTorch</p>
+    </div>
   </div>
-  <div class="skill-card">
-    <img src="/images/sql.png" alt="SQL">
-    <h4>SQL</h4>
-    <p>Database queries, ETL pipelines, optimization</p>
-  </div>
-  <div class="skill-card">
-    <img src="/images/tableau.png" alt="Tableau">
-    <h4>Tableau</h4>
-    <p>Dashboards and KPI reporting</p>
-  </div>
-  <div class="skill-card">
-    <img src="/images/arcgis.png" alt="ArcGIS Pro">
-    <h4>ArcGIS Pro</h4>
-    <p>Geospatial data analysis and visualization</p>
-  </div>
-  <div class="skill-card">
-    <img src="/images/ml.png" alt="Machine Learning">
-    <h4>Machine Learning</h4>
-    <p>Prediction models, TensorFlow, PyTorch</p>
-  </div>
-</div>
+</section>
 
----
+<hr>
 
-<!-- Projects / Call to Action -->
-## ⚡ Projects & Portfolio
-Check out my work here:  
-[View Projects](/projects)  
-
----
-
-<!-- Resume Button -->
-[Download Resume](/resume/resume.pdf){: .nav-button }
+<!-- Industrial Experience Section -->
+<section class="experience-section">
+  <h2>Industrial Experience</h2>
+  <div class="skills-container">
+    <div class="skill-card">
+      <h4>Atmos Energy</h4>
+      <p><em>Data Analyst / Data Scientist | Dallas, TX</em></p>
+      <p>Created ETL pipelines, KPIs, predictive geospatial models, and enterprise dashboards.</p>
+    </div>
+    <div class="skill-card">
+      <h4>CCC Intelligent Solutions</h4>
+      <p><em>Data Analyst | Dallas, TX</em></p>
