@@ -1,6 +1,3 @@
-// Dark mode toggle
-document.addEventListener("DOMContentLoaded", () => {
- // Dark/Light Mode Toggle
 const toggleButton = document.getElementById("dark-toggle");
 
 toggleButton.addEventListener("click", () => {
@@ -21,7 +18,3 @@ if(localStorage.getItem("theme") === "dark") {
 } else {
   toggleButton.textContent = "🌙 Dark Mode";
 }
-
-});
-
-
