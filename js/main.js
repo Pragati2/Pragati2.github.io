@@ -1,26 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleSwitch = document.getElementById("dark-toggle");
+  const toggle = document.getElementById("dark-toggle");
   const body = document.body;
 
-  if (!toggleSwitch) return;
+  if (!toggle) return;
 
-  // Load saved theme from localStorage
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
+  // Load theme
+  if (localStorage.getItem("theme") === "dark") {
     body.classList.add("dark-mode");
-    toggleSwitch.checked = true;
-  } else {
-    toggleSwitch.checked = false;
+    toggle.checked = true;
   }
 
-  // Toggle dark/light mode when slider changes
-  toggleSwitch.addEventListener("change", () => {
+  toggle.addEventListener("change", () => {
     body.classList.toggle("dark-mode");
-    if (body.classList.contains("dark-mode")) {
-      localStorage.setItem("theme", "dark");
-    } else {
-      localStorage.setItem("theme", "light");
-    }
+    localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
   });
 });
+
 
