@@ -1,65 +1,231 @@
-/* Global Theme */
+/* ========= Colors ============
+Heading:     #1C2D41
+Paragraph:   #3C4858
+Iconography: #8392A5
+Secondary:   #C0CCDA
+Dirty Snow:  #E5E9F2
+Snow:        #F9FAFC
+Magenta:     #7551E9
+Orange:      #FF7D51
+Pink:        #ED63D2
+Green:       #2DCA73
+Yellow:      #FFC212
+*/
+
+/* ===== Base Styles ===== */
 body {
-    margin: 0;
-    font-family: Inter, system-ui, sans-serif;
-    background: #f5f7fa;
-    color: #0f172a;
+  background-color: #f9fafc;
+  font-family: "Muli", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dark Mode */
-body.dark {
-    background: #0d1117;
-    color: #e6edf3;
+h1,h2,h3,h4,h5 {
+  color: #1c2d41;
 }
 
-/* Navbar */
-.nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background: #ffffffaa;
-    backdrop-filter: blur(8px);
-    position: sticky;
-    top: 0;
-}
-.nav a { text-decoration: none; color: inherit; }
-.nav-links { list-style: none; display: flex; gap: 20px; }
-
-/* Panels */
-.panel {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 28px;
-    border-radius: 12px;
-    background: white;
-}
-body.dark .panel {
-    background: #161b22;
+strong {
+  color: #1c2d41 !important;
 }
 
-/* Footer */
+p {
+  color: #3c4858;
+}
+
+a {
+  color: #248aaa;
+}
+
+a:hover {
+  color: #207089;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode {
+  background-color: #1c2d41;
+  color: #c0ccda;
+}
+
+body.dark-mode h1,h2,h3,h4,h5 {
+  color: #f9fafc;
+}
+
+body.dark-mode p {
+  color: #c0ccda;
+}
+
+body.dark-mode a {
+  color: #ffc212;
+}
+
+body.dark-mode a:hover {
+  color: #ff7d51;
+}
+
+body.dark-mode .skill-card {
+  background: #2c3e50;
+  color: #c0ccda;
+}
+
+body.dark-mode .footer {
+  background-color: #0f1c2d;
+  color: #c0ccda;
+}
+
+/* ===== Buttons ===== */
+.nav-button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #8392a5;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #e5e9f2;
+}
+
+.btn-dark {
+  background-color: #3c4858;
+  border-color: #3c4858;
+  color: #e5e9f2;
+  transition: all 0.3s ease-out;
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+  background-color: #248aaa;
+  border-color: #248aaa;
+}
+
+.btn-light {
+  background-color: #f9fafc;
+  border-color: #c0ccda;
+  color: #1c2d41;
+}
+
+.btn-light:hover,
+.btn-light:focus {
+  background-color: #e5e9f2;
+  border-color: #8392a5;
+}
+
+/* ===== Image Styling ===== */
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.circular {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+}
+
+/* ===== Skill Cards ===== */
+.skills-section {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.skill-card {
+  flex: 1 1 200px;
+  min-width: 200px;
+  max-width: 250px;
+  height: auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  transition: transform .3s ease, box-shadow .3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+}
+
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.skill-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+  color: #3c4858;
+}
+
+body.dark-mode .skill-card p {
+  color: #c0ccda;
+}
+
+/* ===== Footer ===== */
 .footer {
-    text-align: center;
-    padding: 20px;
-    color: #666;
+  color: #8392a5 !important;
+  background-color: #1c2d41;
+  position: relative;
+  z-index: 9999;
+  padding: 20px 0;
 }
 
-.circular-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 20px auto;
+.footer a {
+  color: #8392a5;
+  transition: all 0.3s ease-out;
 }
 
-
-
-/* Smooth Fade-in */
-.panel, .page-container, .post {
-    animation: fadeIn 0.7s ease;
+.footer a:hover {
+  margin-left: 5px;
+  transition: all 0.3s ease-out;
 }
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+
+/* ===== Paginator ===== */
+.paginator .page-item > a {
+  color: #248aaa;
+}
+
+.paginator .page-item.active > a {
+  background-color: #248aaa;
+  color: #f9fafc;
+}
+
+/* ===== Dark Mode Toggle Button ===== */
+#dark-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: #248aaa;
+  color: #f9fafc;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+#dark-toggle:hover {
+  background-color: #2098d1;
 }
