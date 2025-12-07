@@ -4,7 +4,7 @@ title: "Home"
 ---
 
 # Hi — I’m Pragati  
-**Data Scientist & Machine Learning Professional**
+**Data Science & ANalytics Professional**
 
 <img src="/images/banner.png" alt="banner" style="width:100%;border-radius:12px;margin:20px 0;">
 
