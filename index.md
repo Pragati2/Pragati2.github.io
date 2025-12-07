@@ -1,8 +1,21 @@
 ---
 layout: default
 title: Home
+permalink: /
 ---
 
+<!-- Dark/Light Mode Toggle Slider -->
+<div style="text-align:right; margin-bottom:1rem;">
+  <label class="switch">
+    <input type="checkbox" id="dark-toggle">
+    <span class="slider round">
+      <span class="icon sun">🌞</span>
+      <span class="icon moon">🌙</span>
+    </span>
+  </label>
+</div>
+
+<!-- Hero Section -->
 <section class="hero">
   <img src="/images/pragati.jpg" alt="Pragati" class="circular">
   <h1>Hi, I’m Pragati 👋</h1>
@@ -17,6 +30,7 @@ title: Home
 
 <hr>
 
+<!-- Core Skills Section -->
 <section class="skills-section">
   <h2>🛠 Core Skills</h2>
   <div class="skills-container">
