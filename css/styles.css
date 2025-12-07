@@ -28,7 +28,7 @@ body {
 }
 
 body.dark-mode {
-  background: img src=('/images/bg-modern-dark.jpg') ;
+  background: img src='/images/bg-modern-dark.jpg' ;
   background-size: cover;
   color: var(--text-dark);
 }
@@ -70,14 +70,11 @@ body.dark-mode .hero h1 {
     
     /* Guarantees horizontal centering */
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+
 }
 
-/* Optional: Ensure the entire hero section content is centered */
-.hero {
-    text-align: center;
-}
+
 /* Cards */
 .skills-container {
   display: flex;
