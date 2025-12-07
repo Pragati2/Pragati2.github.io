@@ -58,8 +58,8 @@ body.dark-mode .hero h1 {
 
 /* Circular Hero Image */
 .circular {
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
