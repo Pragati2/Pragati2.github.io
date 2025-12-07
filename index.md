@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <!-- Dark/Light Mode Toggle Slider -->
-<div style="text-align:right; margin-bottom:1rem;">
+<div style="text-align:left; margin-bottom:1rem;">
   <label class="switch">
     <input type="checkbox" id="dark-toggle">
     <span class="slider round">
