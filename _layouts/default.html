@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% include head.html %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
-
 <body>
-  <button id="dark-toggle">🌙 Dark Mode</button>
-  <script src="/js/main.js"></script>
+  {{ content }}
 
-  {% include navbar.html %}
+  <footer class="footer">
+    <p>© {{ site.time | date: "%Y" }} Pragati Khekale | <a href="https://github.com/Pragati2">GitHub</a> | <a href="https://www.linkedin.com/in/pragati-khekale">LinkedIn</a></p>
+  </footer>
 
-  <main class="content">
-    {{ content }}
-  </main>
-
-  {% include footer.html %}
-
-  <script src="/js/main.js"></script>
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
 </body>
 </html>
