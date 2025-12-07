@@ -20,7 +20,7 @@
 
 /* Body & Background */
 body {
-  background: img src='/images/bg-modern.jpg';
+  background: url('../images/bg-modern.jpg');
   background-size: cover;
   color: var(--text-light);
   font-family: "Muli", sans-serif;
@@ -28,8 +28,7 @@ body {
 }
 
 body.dark-mode {
-  background: img src='/images/bg-modern-dark.jpg' ;
-  background-size: cover;
+  background: url('../images/bg-modern-dark.jpg');
   color: var(--text-dark);
 }
 
@@ -53,7 +52,7 @@ body.dark-mode .hero h1 {
 
 .hero p {
   font-size: 1.2rem;
-  margin: 5px 0;
+  margin: 20px 0;
 }
 
 /* Circular Hero Image */
