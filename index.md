@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Home
-permalink: /projects/
+permalink: /
 ---
 <!-- Dark/Light Mode Toggle Slider --> 
 <div style="text-align:right; margin-bottom:1rem;"> 
