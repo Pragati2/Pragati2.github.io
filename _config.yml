@@ -1,12 +1,6 @@
-title: "Pragati Khekale Portfolio"
-description: "Data Scientist | Machine Learning | Analytics"
-url: "https://pragati2.github.io"
+title: Pragati Khekale
+description: Data Scientist & Machine Learning Portfolio
 baseurl: ""
+url: ""
 theme: minima
-
 markdown: kramdown
-highlighter: rouge
-
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
