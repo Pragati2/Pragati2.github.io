@@ -86,7 +86,7 @@ body.dark-mode .hero h1 {
 .skill-card {
   flex: 1 1 220px;
   min-width: 220px;
-  max-width: 80px;
+  max-width: 280px;
   background: var(--card-light);
   padding: 20px;
   border-radius: 12px;
