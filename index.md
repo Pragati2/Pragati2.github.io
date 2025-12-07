@@ -13,7 +13,7 @@ title: Home
   <!-- Call-to-Action Buttons -->
   <div class="cta-buttons">
     <a href="/projects" class="nav-button btn-info">View Projects</a>
-    <a href="/resume/resume.pdf" class="nav-button btn-outline-info">Download Resume</a>
+    <a href="/resume/Pragati_Khekale_DS.pdf" class="nav-button btn-outline-info">Download Resume</a>
   </div>
 </section>
 
