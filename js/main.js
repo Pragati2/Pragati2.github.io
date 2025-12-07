@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!toggle) return;
 
-  // Load theme
+  // Load saved theme
   if (localStorage.getItem("theme") === "dark") {
     body.classList.add("dark-mode");
     toggle.checked = true;
@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   toggle.addEventListener("change", () => {
     body.classList.toggle("dark-mode");
-    localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+    localStorage.setItem(
+      "theme",
+      body.classList.contains("dark-mode") ? "dark" : "light"
+    );
   });
 });
-
-
