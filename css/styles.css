@@ -12,21 +12,19 @@
   --card-dark: rgba(0,0,0,0.3);
 }
 
+
 body {
-  font-family: "Muli", sans-serif;
   background: url('/images/bg-modern.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: var(--paragraph);
-  transition: all 0.3s ease;
-  margin: 0;
-  padding: 0;
+  color: #1C2D41;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
 body.dark-mode {
   background: url('/images/bg-modern-dark.jpg') no-repeat center center fixed;
-  color: var(--secondary);
+  background-size: cover;
+  color: #E5E9F2;
 }
-
 /* Hero Section */
 .hero {
   text-align: center;
