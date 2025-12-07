@@ -1,4 +1,8 @@
---- layout: default title: Home permalink: / --- 
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
 <!-- Dark/Light Mode Toggle Slider --> 
 <div style="text-align:right; margin-bottom:1rem;"> 
   <label class="switch"> <input type="checkbox" id="dark-toggle"> 
