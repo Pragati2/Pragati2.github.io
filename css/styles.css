@@ -1,0 +1,54 @@
+/* Global Theme */
+body {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    background: #f5f7fa;
+    color: #0f172a;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #0d1117;
+    color: #e6edf3;
+}
+
+/* Navbar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #ffffffaa;
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+}
+.nav a { text-decoration: none; color: inherit; }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+
+/* Panels */
+.panel {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 28px;
+    border-radius: 12px;
+    background: white;
+}
+body.dark .panel {
+    background: #161b22;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+/* Smooth Fade-in */
+.panel, .page-container, .post {
+    animation: fadeIn 0.7s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
