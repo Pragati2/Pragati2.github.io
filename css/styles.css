@@ -44,6 +44,17 @@ body.dark .panel {
     color: #666;
 }
 
+.circular-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+}
+
+
+
 /* Smooth Fade-in */
 .panel, .page-container, .post {
     animation: fadeIn 0.7s ease;
