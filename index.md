@@ -3,23 +3,20 @@ layout: default
 title: Home
 ---
 
-<!-- Hero Section -->
 <section class="hero">
-  <img src="/images/Pragati-ProfilePic.jpeg" alt="Pragati" class="circular">
-  <h1>Hi, I’m Pragati</h1>
+  <img src="/images/pragati.jpg" alt="Pragati" class="circular">
+  <h1>Hi, I’m Pragati 👋</h1>
   <p>Data Scientist | Machine Learning | Analytics</p>
   <p>Transforming complex data into actionable insights and predictive models.</p>
 
-  <!-- Call-to-Action Buttons -->
   <div class="cta-buttons">
     <a href="/projects" class="nav-button btn-info">View Projects</a>
-    <a href="/resume/Pragati_Khekale_DS.pdf" class="nav-button btn-outline-info">Download Resume</a>
+    <a href="/resume/resume.pdf" class="nav-button btn-outline-info">Download Resume</a>
   </div>
 </section>
 
 <hr>
 
-<!-- Skills Section -->
 <section class="skills-section">
   <h2>🛠 Core Skills</h2>
   <div class="skills-container">
@@ -50,18 +47,3 @@ title: Home
     </div>
   </div>
 </section>
-
-<hr>
-
-<!-- Industrial Experience Section -->
-<section class="experience-section">
-  <h2>Industrial Experience</h2>
-  <div class="skills-container">
-    <div class="skill-card">
-      <h4>Atmos Energy</h4>
-      <p><em>Data Analyst / Data Scientist | Dallas, TX</em></p>
-      <p>Created ETL pipelines, KPIs, predictive geospatial models, and enterprise dashboards.</p>
-    </div>
-    <div class="skill-card">
-      <h4>CCC Intelligent Solutions</h4>
-      <p><em>Data Analyst | Dallas, TX</em></p>
