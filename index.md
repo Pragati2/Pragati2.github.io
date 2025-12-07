@@ -57,7 +57,7 @@ permalink: /projects/
 <!-- Contact Section --> 
 <section class="contact-section"> 
   <h2>📬 Get in Touch</h2> 
-  <p>Email: <a href="mailto:khekalepragati01@gmail.com">khekalepragati01@gmail.com</a>
-  </p> <p>LinkedIn: <a href="https://www.linkedin.com/in/pragati-khekale/">linkedin.com/in/pragati-khekale/</a></p> 
+  <p>Email: <a href="mailto:khekalepragati01@gmail.com">khekalepragati01@gmail.com</a></p> 
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/pragati-khekale/">linkedin.com/in/pragati-khekale/</a></p> 
   <p>GitHub: <a href="https://github.com/Pragati2">github.com/Pragati2</a></p> 
 </section>
