@@ -28,8 +28,17 @@ body {
 }
 
 body.dark-mode {
-  background: url('../images/bg-modern-dark.jpg');
-  color: var(--text-dark);
+    /* Ensures the image covers the entire viewport */
+    background-size: cover; 
+    
+    /* Prevents the image from tiling/repeating */
+    background-repeat: no-repeat;
+    
+    /* Keeps the image fixed relative to the viewport, not the content */
+    background-attachment: fixed; 
+    
+    /* Centers the image in the viewport */
+    background-position: center center; 
 }
 
 /* Hero Section */
