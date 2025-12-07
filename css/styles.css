@@ -1,162 +1,120 @@
-/* ========= Colors ============
-Heading:     #1C2D41
-Paragraph:   #3C4858
-Iconography: #8392A5
-Secondary:   #C0CCDA
-Dirty Snow:  #E5E9F2
-Snow:        #F9FAFC
-Magenta:     #7551E9
-Orange:      #FF7D51
-Pink:        #ED63D2
-Green:       #2DCA73
-Yellow:      #FFC212
-*/
+/* Modern Portfolio CSS with Dark/Light Mode */
 
-/* ===== Base Styles ===== */
+/* Colors */
+:root {
+  --heading: #1C2D41;
+  --paragraph: #3C4858;
+  --secondary: #C0CCDA;
+  --accent: #248AAA;
+  --bg-light: #F9FAFC;
+  --bg-dark: #1C2D41;
+  --card-light: rgba(255,255,255,0.8);
+  --card-dark: rgba(0,0,0,0.3);
+}
+
 body {
-  background-color: #f9fafc;
   font-family: "Muli", sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background: url('/images/bg-modern.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--paragraph);
+  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
 }
 
-h1,h2,h3,h4,h5 {
-  color: #1c2d41;
-}
-
-strong {
-  color: #1c2d41 !important;
-}
-
-p {
-  color: #3c4858;
-}
-
-a {
-  color: #248aaa;
-}
-
-a:hover {
-  color: #207089;
-}
-
-/* ===== Dark Mode ===== */
 body.dark-mode {
-  background-color: #1c2d41;
-  color: #c0ccda;
+  background: url('/images/bg-modern-dark.jpg') no-repeat center center fixed;
+  color: var(--secondary);
 }
 
-body.dark-mode h1,h2,h3,h4,h5 {
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+  color: var(--heading);
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+/* Buttons */
+.nav-button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-info {
+  background-color: var(--accent);
   color: #f9fafc;
 }
 
-body.dark-mode p {
-  color: #c0ccda;
+.btn-info:hover {
+  background-color: #2098d1;
 }
 
-body.dark-mode a {
-  color: #ffc212;
-}
-
-body.dark-mode a:hover {
-  color: #ff7d51;
-}
-
-body.dark-mode .skill-card {
-  background: #2c3e50;
-  color: #c0ccda;
-}
-
-body.dark-mode .footer {
-  background-color: #0f1c2d;
-  color: #c0ccda;
-}
-
-/* ===== Buttons ===== */
-.nav-button {
+.btn-outline-info {
   background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #8392a5;
-  cursor: pointer;
-  padding: 6px 12px;
-  transition: all 0.3s ease;
+  border: 2px solid var(--accent);
+  color: var(--accent);
 }
 
-.nav-button:hover {
-  background-color: #e5e9f2;
+.btn-outline-info:hover {
+  background-color: var(--accent);
+  color: #f9fafc;
 }
 
-.btn-dark {
-  background-color: #3c4858;
-  border-color: #3c4858;
-  color: #e5e9f2;
-  transition: all 0.3s ease-out;
-}
-
-.btn-dark:hover,
-.btn-dark:focus {
-  background-color: #248aaa;
-  border-color: #248aaa;
-}
-
-.btn-light {
-  background-color: #f9fafc;
-  border-color: #c0ccda;
-  color: #1c2d41;
-}
-
-.btn-light:hover,
-.btn-light:focus {
-  background-color: #e5e9f2;
-  border-color: #8392a5;
-}
-
-/* ===== Image Styling ===== */
-img.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-img.circular {
+/* Hero Image */
+.circular {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: 20px auto;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* ===== Skill Cards ===== */
-.skills-section {
-  width: 100%;
-  margin-top: 40px;
-}
-
+/* Cards */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .skill-card {
-  flex: 1 1 200px;
-  min-width: 200px;
-  max-width: 250px;
-  height: auto;
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 280px;
+  background: var(--card-light);
   padding: 20px;
-  background: #ffffff;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
-  transition: transform .3s ease, box-shadow .3s ease, background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+  transform: translateY(-6px) scale(1.02);
+}
+
+body.dark-mode .skill-card {
+  background: var(--card-dark);
 }
 
 .skill-card img {
@@ -164,68 +122,45 @@ img.circular {
   height: 60px;
   object-fit: contain;
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover img {
+  transform: scale(1.2);
 }
 
 .skill-card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 6px;
+  margin: 10px 0 6px;
+  font-size: 1.2rem;
 }
 
 .skill-card p {
-  font-size: 0.9rem;
-  color: #3c4858;
+  font-size: 0.95rem;
 }
 
-body.dark-mode .skill-card p {
-  color: #c0ccda;
-}
-
-/* ===== Footer ===== */
-.footer {
-  color: #8392a5 !important;
-  background-color: #1c2d41;
-  position: relative;
-  z-index: 9999;
-  padding: 20px 0;
-}
-
-.footer a {
-  color: #8392a5;
-  transition: all 0.3s ease-out;
-}
-
-.footer a:hover {
-  margin-left: 5px;
-  transition: all 0.3s ease-out;
-}
-
-/* ===== Paginator ===== */
-.paginator .page-item > a {
-  color: #248aaa;
-}
-
-.paginator .page-item.active > a {
-  background-color: #248aaa;
-  color: #f9fafc;
-}
-
-/* ===== Dark Mode Toggle Button ===== */
+/* Dark Mode Toggle Button */
 #dark-toggle {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 1000;
-  padding: 8px 14px;
+  padding: 10px 16px;
   border-radius: 8px;
   border: none;
-  background-color: #248aaa;
+  background-color: var(--accent);
   color: #f9fafc;
   cursor: pointer;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 #dark-toggle:hover {
   background-color: #2098d1;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
