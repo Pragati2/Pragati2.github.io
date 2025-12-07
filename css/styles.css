@@ -227,6 +227,17 @@ input:checked + .slider:before {
   color: var(--bg-light);
 }
 
+/* Add this to a relevant section in styles.css */
+body.dark-mode .btn-secondary {
+    /* Example 1: If you want it to match the primary button */
+    background-color: var(--primary-color-dark); 
+    color: var(--text-light); /* Assuming the primary color is dark */
+
+    /* OR Example 2: If you want an outlined look with dark mode colors */
+    background: transparent;
+    border: 1px solid var(--primary-color-dark);
+    color: var(--text-dark); /* Using a light text color */
+}
 /* Styles for the main navigation bar */
 .nav {
     display: flex;
