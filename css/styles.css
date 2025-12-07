@@ -20,7 +20,7 @@
 
 /* Body & Background */
 body {
-  background: img src='/images/bg-modern.jpg' no-repeat center center fixed;
+  background: img src='/images/bg-modern.jpg';
   background-size: cover;
   color: var(--text-light);
   font-family: "Muli", sans-serif;
@@ -28,7 +28,7 @@ body {
 }
 
 body.dark-mode {
-  background: img src=('/images/bg-modern-dark.jpg') no-repeat center center fixed;
+  background: img src=('/images/bg-modern-dark.jpg') ;
   background-size: cover;
   color: var(--text-dark);
 }
