@@ -1,6 +1,9 @@
-/* Modern Portfolio CSS with Dark/Light Mode */
+/* ================================
+   Modern Portfolio CSS
+   Dark / Light Mode with Slider
+================================ */
 
-/* Colors */
+/* Colors & Themes */
 :root {
   --heading: #1C2D41;
   --paragraph: #3C4858;
@@ -9,7 +12,7 @@
   --accent-hover: #2098d1;
   --bg-light: #F9FAFC;
   --bg-dark: #1C2D41;
-  --card-light: rgba(255,255,255,0.8);
+  --card-light: rgba(255,255,255,0.85);
   --card-dark: rgba(0,0,0,0.3);
   --text-light: #1C2D41;
   --text-dark: #E5E9F2;
@@ -44,7 +47,7 @@ body.dark-mode {
 }
 
 body.dark-mode .hero h1 {
-  color: #E5E9F2;
+  color: var(--text-dark);
   text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
 }
 
@@ -53,14 +56,68 @@ body.dark-mode .hero h1 {
   margin: 5px 0;
 }
 
-/* Buttons */
-.nav-button, .btn-info, .btn-outline-info {
-  padding: 10px 20px;
-  margin: 10
+/* Circular Hero Image */
+.circular {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
 
+/* Cards */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
 
-    
-/* Dark/Light Mode Slider with Icons */
+.skill-card {
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 280px;
+  background: var(--card-light);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+body.dark-mode .skill-card {
+  background: var(--card-dark);
+}
+
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover img {
+  transform: scale(1.2);
+}
+
+.skill-card h4 {
+  margin: 10px 0 6px;
+  font-size: 1.2rem;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+}
+
+/* Dark / Light Mode Slider */
 .switch {
   position: relative;
   display: inline-block;
@@ -95,6 +152,14 @@ body.dark-mode .hero h1 {
   z-index: 2;
 }
 
+input:checked + .slider {
+  background-color: var(--accent);
+}
+
+input:checked + .slider:before {
+  transform: translateX(36px);
+}
+
 /* Icons inside slider */
 .slider .icon {
   position: absolute;
@@ -114,15 +179,6 @@ body.dark-mode .hero h1 {
   color: #E5E9F2;
 }
 
-/* Checked = Dark Mode */
-input:checked + .slider {
-  background-color: var(--accent);
-}
-
-input:checked + .slider:before {
-  transform: translateX(36px); /* Moves the knob to right */
-}
-
 /* Rounded slider */
 .slider.round {
   border-radius: 34px;
@@ -132,3 +188,42 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+/* Buttons */
+.nav-button, .btn-info, .btn-outline-info {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-info {
+  background-color: var(--accent);
+  color: var(--bg-light);
+}
+
+.btn-info:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-outline-info {
+  background-color: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline-info:hover {
+  background-color: var(--accent);
+  color: var(--bg-light);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
