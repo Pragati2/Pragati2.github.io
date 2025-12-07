@@ -3,7 +3,7 @@ layout: page
 title: About Me
 ---
 
-<img src="/images/pragati.jpg" alt="Pragati" class="circular">
+<img src="/images/PragatiProfilePic.jpeg" alt="Pragati" class="circular">
 
 # About Me
 I am a data professional with 3+ years of experience across Energy, Automotive, and Insurance domains.  
