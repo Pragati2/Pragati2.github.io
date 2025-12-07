@@ -227,6 +227,24 @@ input:checked + .slider:before {
   color: var(--bg-light);
 }
 
+/* Styles for the main navigation bar */
+.nav {
+    display: flex;
+    justify-content: space-between; /* Pushes the logo (left) and links (right) to the edges */
+    align-items: center; /* Vertically centers content */
+    padding: 15px 20px; /* Add some padding for visual spacing */
+    /* Add any background or border styles here */
+}
+
+/* Styles for the list of links */
+.nav-links {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Displays list items horizontally */
+    gap: 25px; /* Adds space between each link (adjust as needed) */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
 /* Responsive */
 @media(max-width:768px){
   .skills-container {
