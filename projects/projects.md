@@ -15,7 +15,7 @@ permalink: /projects/
   </label>
 </div>
 
-# Projects
+
 
 <div class="skills-container">
 
