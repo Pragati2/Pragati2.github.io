@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects
+title: Home
 permalink: /projects/
 ---
 <!-- Dark/Light Mode Toggle Slider --> 
