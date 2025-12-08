@@ -18,7 +18,9 @@ permalink: /
   <h1>Hi, I’m Pragati 👋</h1> <p>Data Scientist | Machine Learning | Analytics</p> 
   <p>Transforming complex data into actionable insights and predictive models.</p> 
   <div class="cta-buttons"> 
-    <a href="/projects/" class="nav-button btn-info">View Projects</a> 
+    <a href="/projects/" class="nav-button btn-info">View Projects</a>
+    <a href="https://public.tableau.com/app/profile/pragati.khekale/vizzes" class="nav-button btn-outline-info">View Tableau Profile</a>
+    <a href="https://github.com/Pragati2" class="nav-button btn-outline-info">View Github Profile</a> 
     <a href="/resume/Pragati_Khekale_DS.pdf" class="nav-button btn-outline-info">Download Resume</a> 
   </div> 
 </section> 
