@@ -28,6 +28,7 @@ body {
 }
 
 body.dark-mode {
+    background: url('../images/bg-modern-dark.jpg');
     /* Ensures the image covers the entire viewport */
     background-size: cover; 
     
