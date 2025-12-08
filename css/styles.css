@@ -22,6 +22,14 @@
 body {
   background: url('../images/bg-modern.jpg');
   background-size: cover;
+  /* Prevents the image from tiling/repeating */
+  background-repeat: no-repeat;
+    
+  /* Keeps the image fixed relative to the viewport, not the content */
+  background-attachment: fixed; 
+    
+  /* Centers the image in the viewport */
+  background-position: center center; 
   color: var(--text-light);
   font-family: "Muli", sans-serif;
   transition: background 0.5s ease, color 0.5s ease;
