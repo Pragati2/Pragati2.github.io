@@ -64,7 +64,7 @@ permalink: /projects/
   <div class="skill-card">
     <h4>Big Data AWS ML Analysis</h4>
     <p>Evaluated AWS services for large-scale ML workflows. Built and compared regression, decision tree, SVM, and gradient boosting models in AWS.</p>
-    <a href="https://github.com/Pragati2/Analysis-Big-Data-Machine-learning-models-on-amazon-AWS" class="btn-link">View on GitHub</a>
+    <a href="https://github.com/Pragati2/Quantified-Comparison-of-AWS-services.git" class="btn-link">View on GitHub</a>
   </div>
 
   <!-- Project 8 -->
