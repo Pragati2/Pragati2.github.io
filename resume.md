@@ -6,7 +6,7 @@ title: Resume
 # 📄 Resume
 
 Download my full resume as PDF:  
-[Download Resume](/resume/Pragati_Khekale_DS.pdf){: .nav-button }
+[Download Resume](/resume/Pragati_Khekale_Analyst_0123.pdf){: .nav-button }
 
 ---
 
