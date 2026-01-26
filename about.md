@@ -6,8 +6,9 @@ title: About Me
 <img src="/images/pragati.jpeg" alt="Pragati" class="circular">
 
 # About Me
-I am a data professional with 3+ years of experience across Energy, Automotive, and Insurance domains.  
-I love turning complex datasets into actionable insights and predictive models.
+Data-driven Analyst and ML specialist with 3+ years of experience in risk prevention and distributed data engineering.
+Expertise in building high-scale NLP and sentiment analysis pipelines using AWS (EMR, SageMaker), SQL, and SparkR. Proven
+ability to identify geographical and technical risk clusters, automate ETL workflows, and deliver live insights to integrity teams.
 
 ---
 
