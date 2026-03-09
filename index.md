@@ -1,65 +1,1259 @@
----
-layout: page
-title: Home
-permalink: /
----
-<!-- Dark/Light Mode Toggle Slider --> 
-<div style="text-align:right; margin-bottom:1rem;"> 
-  <label class="switch"> <input type="checkbox" id="dark-toggle"> 
-    <span class="slider round"> 
-      <span class="icon sun">🌞</span> 
-      <span class="icon moon">🌙</span> 
-    </span> 
-  </label> 
-</div> 
-<!-- Hero Section --> 
-<section class="hero" style="text-align: center;">
-  <img src="/images/pragati.jpg" alt="Pragati" class="circular"> 
-  <h1>Hi, I’m Pragati 👋</h1> <p>Data Scientist | Machine Learning | Analytics</p> 
-  <p>Transforming complex data into actionable insights and predictive models.</p> 
-  <div class="cta-buttons"> 
-    <a href="/projects/" class="nav-button btn-info">View Projects</a>
-    <a href="https://public.tableau.com/app/profile/pragati.khekale/vizzes" class="nav-button btn-outline-info">View Tableau Profile</a>
-    <a href="https://github.com/Pragati2" class="nav-button btn-outline-info">View Github Profile</a> 
-    <a href="/resume/Pragati_Khekale_DS.pdf" class="nav-button btn-outline-info">Download Resume</a> 
-  </div> 
-</section> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragati Khekale — Data Scientist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #080d14;
+      --surface: #0e1621;
+      --surface2: #141e2e;
+      --border: #1d2e45;
+      --accent: #00e5c0;
+      --accent2: #4f8fff;
+      --accent3: #ff6b6b;
+      --text: #e8edf5;
+      --text-muted: #6b7fa3;
+      --text-dim: #3a4f6e;
+      --nav-bg: rgba(8, 13, 20, 0.85);
+      --font-display: 'Syne', sans-serif;
+      --font-mono: 'DM Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
 
-<!-- Core Skills Section --> 
-<section class="skills-section"> 
-  <h2>🛠 Core Skills</h2> 
-  <div class="skills-container"> 
-    <div class="skill-card"> 
-      <img src="/images/python.png" alt="Python"> 
-      <h4>Python</h4> 
-      <p>Data Analysis, Automation, Machine Learning</p> 
-    </div> 
-    <div class="skill-card"> 
-      <img src="/images/sql.png" alt="SQL"> 
-      <h4>SQL</h4> 
-      <p>Database Queries, ETL Pipelines</p> 
-    </div> 
-    <div class="skill-card"> 
-      <img src="/images/tableau.png" alt="Tableau"> 
-      <h4>Tableau</h4> 
-      <p>Dashboards, KPI Reporting</p> 
-    </div> 
-    <div class="skill-card"> 
-      <img src="/images/arcgis.png" alt="ArcGIS Pro"> 
-      <h4>ArcGIS Pro</h4> 
-      <p>Geospatial Data Analysis & Visualization</p> 
-    </div> <div class="skill-card"> 
-      <img src="/images/ml.png" alt="Machine Learning"> 
-      <h4>Machine Learning</h4> 
-      <p>Prediction Models, TensorFlow, PyTorch</p> 
-    </div> 
-  </div> 
-</section> 
+    html.light {
+      --bg: #f5f7fa;
+      --surface: #ffffff;
+      --surface2: #edf0f5;
+      --border: #d0d8e8;
+      --accent: #00b09b;
+      --accent2: #2d6cdf;
+      --accent3: #e84343;
+      --text: #0f1923;
+      --text-muted: #4a5f7a;
+      --text-dim: #9aabc2;
+      --nav-bg: rgba(245, 247, 250, 0.88);
+    }
 
-<!-- Contact Section --> 
-<section class="contact-section"> 
-  <h2>📬 Get in Touch</h2> 
-  <p>Email: <a href="mailto:khekalepragati01@gmail.com">khekalepragati01@gmail.com</a></p> 
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/pragati-khekale/">linkedin.com/in/pragati-khekale/</a></p> 
-  <p>GitHub: <a href="https://github.com/Pragati2">github.com/Pragati2</a></p> 
+    html, body {
+      transition: background 0.35s ease, color 0.35s ease;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NOISE TEXTURE */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* GRID BACKGROUND */
+    .grid-bg {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.25;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--nav-bg);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 60px 80px;
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+    }
+
+    .hero-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: var(--text);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.1s forwards;
+    }
+
+    .hero-name .highlight {
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--accent);
+    }
+
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin-bottom: 48px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.2s forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.3s forwards;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--bg);
+      font-weight: 500;
+    }
+
+    .btn-primary:hover {
+      background: #00ffdb;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(0, 229, 192, 0.25);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 48px;
+      left: 60px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      opacity: 0;
+      animation: fadeIn 0.8s ease 0.8s forwards;
+    }
+
+    .scroll-line {
+      width: 40px;
+      height: 1px;
+      background: var(--text-dim);
+    }
+
+    /* FLOATING STATS */
+    .hero-stats {
+      position: absolute;
+      right: 60px;
+      bottom: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      opacity: 0;
+      animation: fadeIn 0.8s ease 0.5s forwards;
+    }
+
+    .stat {
+      text-align: right;
+    }
+
+    .stat-num {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 2.2rem;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* SECTION COMMONS */
+    section {
+      position: relative;
+      z-index: 1;
+      padding: 100px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 60px;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border), transparent);
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 24px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 229, 192, 0.08);
+    }
+
+    .skill-card:hover::before { transform: scaleX(1); }
+
+    .skill-icon {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+    }
+
+    .skill-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .skill-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* FEATURED PROJECT */
+    .featured-project {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      transition: border-color 0.3s;
+    }
+
+    .featured-project:hover { border-color: var(--accent2); }
+
+    .project-header {
+      padding: 40px 48px 32px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    .project-badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 4px;
+      background: rgba(79, 143, 255, 0.12);
+      color: var(--accent2);
+      border: 1px solid rgba(79, 143, 255, 0.25);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .project-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.8rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      max-width: 600px;
+    }
+
+    .project-body {
+      padding: 36px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .feature-list li::before {
+      content: '→';
+      color: var(--accent);
+      font-family: var(--font-mono);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-content: flex-start;
+    }
+
+    .tech-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 5px 12px;
+      border-radius: 4px;
+      background: var(--surface2);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      letter-spacing: 0.04em;
+    }
+
+    .project-footer {
+      padding: 24px 48px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+    }
+
+    /* ALGORITHM VISUAL */
+    .algo-visual {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      line-height: 2;
+    }
+
+    .algo-comment { color: var(--text-dim); }
+    .algo-key { color: var(--accent2); }
+    .algo-val { color: var(--accent); }
+    .algo-op { color: var(--accent3); }
+    .algo-num { color: #f4a261; }
+
+    /* PIPELINE FLOW */
+    .pipeline {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+
+    .pipe-step {
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+      padding: 20px 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .pipe-step:first-child { border-radius: 10px 0 0 10px; }
+    .pipe-step:last-child { border-radius: 0 10px 10px 0; }
+
+    .pipe-step-icon {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .pipe-step-title {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .pipe-step-desc {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .pipe-arrow {
+      width: 32px;
+      height: 1px;
+      background: var(--accent);
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .pipe-arrow::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: -3px;
+      width: 0;
+      height: 0;
+      border-left: 6px solid var(--accent);
+      border-top: 3.5px solid transparent;
+      border-bottom: 3.5px solid transparent;
+    }
+
+    /* MORE PROJECTS GRID */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      transition: all 0.3s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent2);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(79, 143, 255, 0.1);
+    }
+
+    .project-card-num {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .project-card-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .project-card-desc {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-text {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      padding: 16px 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: all 0.2s;
+    }
+
+    .contact-link:hover {
+      color: var(--text);
+      border-color: var(--accent);
+      transform: translateX(4px);
+    }
+
+    .contact-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface2);
+      border-radius: 8px;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-link:hover .contact-icon {
+      background: rgba(0, 229, 192, 0.1);
+    }
+
+    /* TERMINAL CARD */
+    .terminal {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .terminal-bar {
+      padding: 12px 16px;
+      background: #111a27;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dot { width: 11px; height: 11px; border-radius: 50%; }
+    .dot-red { background: #ff5f57; }
+    .dot-yellow { background: #febc2e; }
+    .dot-green { background: #28c840; }
+
+    .terminal-title {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      margin-left: 8px;
+    }
+
+    .terminal-body {
+      padding: 24px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      line-height: 2;
+    }
+
+    .t-prompt { color: var(--accent); }
+    .t-cmd { color: var(--text); }
+    .t-out { color: var(--text-muted); }
+    .t-accent { color: var(--accent2); }
+
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 14px;
+      background: var(--accent);
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+
+    /* FOOTER */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 40px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+    }
+
+    .footer-copy {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* THEME TOGGLE */
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 14px 6px 8px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0, 229, 192, 0.1);
+    }
+
+    .toggle-track {
+      width: 32px;
+      height: 18px;
+      background: var(--border);
+      border-radius: 999px;
+      position: relative;
+      transition: background 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    html.light .toggle-track {
+      background: var(--accent);
+    }
+
+    .toggle-thumb {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 12px;
+      height: 12px;
+      background: var(--text-muted);
+      border-radius: 50%;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    html.light .toggle-thumb {
+      transform: translateX(14px);
+      background: #fff;
+    }
+
+    .toggle-icon {
+      font-size: 0.82rem;
+      line-height: 1;
+      transition: opacity 0.2s;
+      user-select: none;
+    }
+
+    .toggle-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      transition: color 0.2s;
+    }
+
+    /* Light mode surface transitions */
+    .skill-card, .featured-project, .project-card,
+    .terminal, .algo-visual, .contact-link, .pipe-step,
+    footer, nav {
+      transition: background 0.35s ease, border-color 0.35s ease,
+                  color 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    /* Light mode grid tint */
+    html.light .grid-bg {
+      opacity: 0.15;
+    }
+
+    /* Light mode terminal stays dark */
+    html.light .terminal {
+      background: #1a2232;
+      border-color: #2a3a52;
+    }
+
+    html.light .terminal-bar {
+      background: #111a27;
+    }
+
+    /* Light mode algo block */
+    html.light .algo-visual {
+      background: #1a2232;
+      border-color: #2a3a52;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 24px 80px; }
+      section { padding: 80px 24px; }
+      .hero-stats { display: none; }
+      .project-body { grid-template-columns: 1fr; }
+      .project-header { flex-direction: column; }
+      .contact-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 16px; text-align: center; }
+      .project-footer { padding: 24px; }
+      .project-header, .project-body { padding: 24px; }
+      .pipeline { gap: 4px; }
+      .pipe-arrow { display: none; }
+      .pipe-step { border-radius: 8px !important; margin-bottom: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">PK<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#skills">skills</a></li>
+    <li><a href="#projects">projects</a></li>
+    <li><a href="#contact">contact</a></li>
+    <li><a href="/resume/Pragati_Khekale_DS.pdf" target="_blank">resume ↗</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+    <div class="toggle-track">
+      <div class="toggle-thumb"></div>
+    </div>
+    <span class="toggle-icon" id="toggleIcon">☀️</span>
+    <span class="toggle-label" id="toggleLabel">light</span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<div style="position:relative; z-index:1;">
+  <div class="hero">
+    <p class="hero-label">// Data Scientist & ML Engineer</p>
+    <h1 class="hero-name">
+      Pragati<br>
+      <span class="highlight">Khekale</span>
+    </h1>
+    <p class="hero-tagline">
+      Transforming complex data into actionable insights, predictive models, and intelligent systems that scale.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects →</a>
+      <a href="https://public.tableau.com/app/profile/pragati.khekale/vizzes" target="_blank" class="btn btn-outline">Tableau Profile ↗</a>
+      <a href="https://github.com/Pragati2" target="_blank" class="btn btn-outline">GitHub ↗</a>
+      <a href="/resume/Pragati_Khekale_DS.pdf" target="_blank" class="btn btn-outline">Resume ↗</a>
+    </div>
+
+    <div class="hero-scroll">
+      <span class="scroll-line"></span>
+      <span>scroll to explore</span>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">core technologies</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">AI</div>
+        <div class="stat-label">agent builder</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label reveal">// 01 — expertise</p>
+  <h2 class="section-title reveal">Core Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="skill-icon">🐍</div>
+      <div class="skill-name">Python</div>
+      <div class="skill-desc">Data analysis, automation, ML pipelines, and AI agents</div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🗄️</div>
+      <div class="skill-name">SQL</div>
+      <div class="skill-desc">Database queries, ETL pipelines, and data transformation</div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">📊</div>
+      <div class="skill-name">Tableau</div>
+      <div class="skill-desc">Interactive dashboards and KPI reporting</div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🗺️</div>
+      <div class="skill-name">ArcGIS Pro</div>
+      <div class="skill-desc">Geospatial data analysis and visualization</div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🤖</div>
+      <div class="skill-name">Machine Learning</div>
+      <div class="skill-desc">Predictive models with TensorFlow and PyTorch</div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🔗</div>
+      <div class="skill-name">NLP & AI Agents</div>
+      <div class="skill-desc">TF-IDF, cosine similarity, LLM orchestration</div>
+    </div>
+  </div>
 </section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <p class="section-label reveal">// 02 — work</p>
+  <h2 class="section-title reveal">Featured Project</h2>
+
+  <!-- PIPELINE FLOW -->
+  <div class="pipeline reveal">
+    <div class="pipe-step">
+      <div class="pipe-step-icon">📄</div>
+      <div class="pipe-step-title">Resume Parse</div>
+      <div class="pipe-step-desc">PDF → skills & keywords</div>
+    </div>
+    <div class="pipe-arrow"></div>
+    <div class="pipe-step">
+      <div class="pipe-step-icon">🌐</div>
+      <div class="pipe-step-title">Scrape Jobs</div>
+      <div class="pipe-step-desc">Indeed + LinkedIn</div>
+    </div>
+    <div class="pipe-arrow"></div>
+    <div class="pipe-step">
+      <div class="pipe-step-icon">🧠</div>
+      <div class="pipe-step-title">NLP Match</div>
+      <div class="pipe-step-desc">TF-IDF + skill overlap</div>
+    </div>
+    <div class="pipe-arrow"></div>
+    <div class="pipe-step">
+      <div class="pipe-step-icon">🏷️</div>
+      <div class="pipe-step-title">Classify</div>
+      <div class="pipe-step-desc">H1B / MAANG / F500</div>
+    </div>
+    <div class="pipe-arrow"></div>
+    <div class="pipe-step">
+      <div class="pipe-step-icon">📬</div>
+      <div class="pipe-step-title">Notify</div>
+      <div class="pipe-step-desc">Sheets + email alerts</div>
+    </div>
+  </div>
+
+  <!-- FEATURED PROJECT CARD -->
+  <div class="featured-project reveal">
+    <div class="project-header">
+      <div>
+        <div class="project-title">Job Finder AI Agent</div>
+        <div class="project-desc">An intelligent, automated job search system for data science positions. Scrapes postings, runs NLP-based resume matching, classifies by H1B/MAANG/Fortune 500 signals, and delivers ranked results to Google Sheets with email alerts.</div>
+      </div>
+      <span class="project-badge">AI Agent System</span>
+    </div>
+
+    <div class="project-body">
+      <div>
+        <ul class="feature-list">
+          <li>Resume parsing — extracts skills, experience, and keywords from PDF</li>
+          <li>TF-IDF cosine similarity + keyword overlap scoring (0–100%)</li>
+          <li>H1B visa sponsorship signal detection</li>
+          <li>MAANG & Fortune 500 company classification</li>
+          <li>ATS portal detection (Workday, Greenhouse, Lever, etc.)</li>
+          <li>Google Sheets integration with conditional formatting</li>
+          <li>Automated schedule — Mon–Fri 9 AM, 11:30 AM, 4:30 PM</li>
+          <li>HTML email reports with ATS keyword suggestions</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="algo-visual">
+          <div class="algo-comment"># Matching Algorithm</div>
+          <div>
+            <span class="algo-key">tfidf_score</span>
+            <span style="color:var(--text-muted)"> = </span>
+            <span class="algo-val">cosine_similarity</span>
+            <span style="color:var(--text-muted)">(resume, jd)</span>
+          </div>
+          <div>
+            <span class="algo-key">kw_score</span>
+            <span style="color:var(--text-muted)"> = </span>
+            <span class="algo-val">skill_overlap</span>
+            <span style="color:var(--text-muted)">(resume, jd)</span>
+          </div>
+          <div>&nbsp;</div>
+          <div class="algo-comment"># Weighted blend</div>
+          <div>
+            <span class="algo-key">match</span>
+            <span style="color:var(--text-muted)"> = (</span>
+            <span class="algo-num">0.65</span>
+            <span class="algo-op"> × </span>
+            <span class="algo-key">tfidf_score</span>
+          </div>
+          <div>
+            <span style="color:var(--text-muted)">       + </span>
+            <span class="algo-num">0.35</span>
+            <span class="algo-op"> × </span>
+            <span class="algo-key">kw_score</span>
+            <span style="color:var(--text-muted)">)</span>
+          </div>
+          <div>&nbsp;</div>
+          <div class="algo-comment"># Threshold: 72% to qualify</div>
+          <div>
+            <span style="color:var(--text-muted)">if </span>
+            <span class="algo-key">match</span>
+            <span style="color:var(--text-muted)"> &gt;= </span>
+            <span class="algo-num">0.72</span>
+            <span style="color:var(--text-muted)">: </span>
+            <span class="algo-val">log_to_sheets</span>
+            <span style="color:var(--text-muted)">()</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">BeautifulSoup4</span>
+            <span class="tech-tag">scikit-learn</span>
+            <span class="tech-tag">pypdf</span>
+            <span class="tech-tag">Google Sheets API</span>
+            <span class="tech-tag">APScheduler</span>
+            <span class="tech-tag">SMTP</span>
+            <span class="tech-tag">TF-IDF</span>
+            <span class="tech-tag">NLP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-footer">
+      <a href="https://github.com/Pragati2/Job_search_ai_agent" target="_blank" class="btn btn-primary">View on GitHub →</a>
+      <a href="https://github.com/Pragati2/Job_search_ai_agent/blob/main/README.md" target="_blank" class="btn btn-outline">Documentation ↗</a>
+    </div>
+  </div>
+
+  <!-- MORE PROJECTS PLACEHOLDER -->
+  <div class="projects-grid" style="margin-top: 24px;">
+    <a href="https://public.tableau.com/app/profile/pragati.khekale/vizzes" target="_blank" class="project-card reveal">
+      <div class="project-card-num">02 —</div>
+      <div class="project-card-title">Tableau Dashboards</div>
+      <div class="project-card-desc">Interactive data visualizations and KPI dashboards built with Tableau Public. Business analytics, trends, and storytelling through data.</div>
+      <div class="tech-stack">
+        <span class="tech-tag">Tableau</span>
+        <span class="tech-tag">Data Viz</span>
+        <span class="tech-tag">Analytics</span>
+      </div>
+    </a>
+    <div class="project-card reveal" style="opacity: 0.4; cursor: default;">
+      <div class="project-card-num">03 —</div>
+      <div class="project-card-title">Geospatial Analysis</div>
+      <div class="project-card-desc">Spatial data analysis and visualization using ArcGIS Pro. Mapping complex geographic patterns to drive location-based decisions.</div>
+      <div class="tech-stack">
+        <span class="tech-tag">ArcGIS Pro</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">GIS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label reveal">// 03 — connect</p>
+  <h2 class="section-title reveal">Get in Touch</h2>
+
+  <div class="contact-grid">
+    <div class="reveal">
+      <p class="contact-text">
+        Open to data science, ML engineering, and analytics roles. Whether it's a full-time position, freelance project, or just a conversation about data — I'd love to connect.
+      </p>
+      <div class="contact-links">
+        <a href="/cdn-cgi/l/email-protection#0f64676a646e636a7f7d6e686e7b663f3e4f68626e6663216c6062" class="contact-link">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div style="font-size:0.82rem; color: var(--text); margin-bottom: 2px;">Email</div>
+            <div style="font-size:0.78rem; font-family: var(--font-mono);"><span class="__cf_email__" data-cfemail="72191a1719131e170200131513061b424332151f131b1e5c111d1f">[email&#160;protected]</span></div>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/pragati-khekale/" target="_blank" class="contact-link">
+          <div class="contact-icon">💼</div>
+          <div>
+            <div style="font-size:0.82rem; color: var(--text); margin-bottom: 2px;">LinkedIn</div>
+            <div style="font-size:0.78rem; font-family: var(--font-mono);">pragati-khekale</div>
+          </div>
+        </a>
+        <a href="https://github.com/Pragati2" target="_blank" class="contact-link">
+          <div class="contact-icon">🐙</div>
+          <div>
+            <div style="font-size:0.82rem; color: var(--text); margin-bottom: 2px;">GitHub</div>
+            <div style="font-size:0.78rem; font-family: var(--font-mono);">github.com/Pragati2</div>
+          </div>
+        </a>
+        <a href="/resume/Pragati_Khekale_DS.pdf" target="_blank" class="contact-link">
+          <div class="contact-icon">📄</div>
+          <div>
+            <div style="font-size:0.82rem; color: var(--text); margin-bottom: 2px;">Resume</div>
+            <div style="font-size:0.78rem; font-family: var(--font-mono);">Download PDF</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <span class="terminal-title">pragati@portfolio ~ python orchestrator.py</span>
+        </div>
+        <div class="terminal-body">
+          <div><span class="t-prompt">$</span> <span class="t-cmd">python orchestrator.py</span></div>
+          <div class="t-out">&nbsp;</div>
+          <div><span class="t-accent">[ INFO ]</span> <span class="t-out">Parsing resume...</span></div>
+          <div><span class="t-accent">[ INFO ]</span> <span class="t-out">Extracted 28 skills</span></div>
+          <div><span class="t-accent">[ INFO ]</span> <span class="t-out">Scraping Indeed + LinkedIn...</span></div>
+          <div><span class="t-accent">[ INFO ]</span> <span class="t-out">Found 47 positions</span></div>
+          <div class="t-out">&nbsp;</div>
+          <div><span class="t-accent">[ MATCH ]</span> <span class="t-out">Senior Data Scientist @ Google — </span><span style="color:var(--accent)">91%</span></div>
+          <div><span class="t-accent">[ MATCH ]</span> <span class="t-out">ML Engineer @ Amazon — </span><span style="color:var(--accent)">88%</span></div>
+          <div><span class="t-accent">[ MATCH ]</span> <span class="t-out">Data Scientist @ Meta — </span><span style="color:var(--accent)">84%</span></div>
+          <div class="t-out">&nbsp;</div>
+          <div><span class="t-accent">[ DONE ]</span> <span class="t-out">12 qualified jobs → Sheets ✓</span></div>
+          <div><span class="t-accent">[ DONE ]</span> <span class="t-out">Email notification sent ✓</span></div>
+          <div class="t-out">&nbsp;</div>
+          <div><span class="t-prompt">$</span> <span class="cursor"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">© 2026 Pragati Khekale. Built with care.</div>
+  <div class="footer-links">
+    <a href="https://github.com/Pragati2" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/pragati-khekale/" target="_blank">LinkedIn</a>
+    <a href="https://public.tableau.com/app/profile/pragati.khekale/vizzes" target="_blank">Tableau</a>
+    <a href="/resume/Pragati_Khekale_DS.pdf" target="_blank">Resume</a>
+  </div>
+</footer>
+
+<script>
+  // ── THEME TOGGLE ──────────────────────────────────────────
+  const html = document.documentElement;
+  const toggleBtn = document.getElementById('themeToggle');
+  const toggleIcon = document.getElementById('toggleIcon');
+  const toggleLabel = document.getElementById('toggleLabel');
+
+  function applyTheme(mode) {
+    if (mode === 'light') {
+      html.classList.add('light');
+      toggleIcon.textContent = '🌙';
+      toggleLabel.textContent = 'dark';
+    } else {
+      html.classList.remove('light');
+      toggleIcon.textContent = '☀️';
+      toggleLabel.textContent = 'light';
+    }
+  }
+
+  // Load saved preference (default: dark)
+  const saved = localStorage.getItem('theme') || 'dark';
+  applyTheme(saved);
+
+  toggleBtn.addEventListener('click', () => {
+    const isLight = html.classList.contains('light');
+    const next = isLight ? 'dark' : 'light';
+    localStorage.setItem('theme', next);
+    applyTheme(next);
+  });
+
+  // ── SCROLL REVEAL ─────────────────────────────────────────
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  revealEls.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
